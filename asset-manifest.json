@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/pace-calculator/static/css/main.05f8378a.css",
+    "main.js": "/pace-calculator/static/js/main.d104dd70.js",
+    "static/js/787.26b21a59.chunk.js": "/pace-calculator/static/js/787.26b21a59.chunk.js",
+    "static/media/ms_sans_serif.woff": "/pace-calculator/static/media/ms_sans_serif.aac84aa6de42b83d1a62.woff",
+    "static/media/ms_sans_serif_bold.woff": "/pace-calculator/static/media/ms_sans_serif_bold.9fbe71248995f1c639d4.woff",
+    "static/media/ms_sans_serif.woff2": "/pace-calculator/static/media/ms_sans_serif.0348082abb503fb6a8c2.woff2",
+    "static/media/ms_sans_serif_bold.woff2": "/pace-calculator/static/media/ms_sans_serif_bold.7fcf57cc6e87ecddbf64.woff2",
+    "index.html": "/pace-calculator/index.html",
+    "main.05f8378a.css.map": "/pace-calculator/static/css/main.05f8378a.css.map",
+    "main.d104dd70.js.map": "/pace-calculator/static/js/main.d104dd70.js.map",
+    "787.26b21a59.chunk.js.map": "/pace-calculator/static/js/787.26b21a59.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05f8378a.css",
+    "static/js/main.d104dd70.js"
+  ]
+}

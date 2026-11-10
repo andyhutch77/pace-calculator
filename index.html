@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f5f0">
+    <meta name="description" content="Find your target running pace per mile and kilometre.">
+    <title>Pace / Running pace calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <a class="brand" href="./" aria-label="Pace home">
+          <span class="brand-mark" aria-hidden="true">P<span>.</span></span>
+          <span>PACE<span class="brand-dot">.</span></span>
+        </a>
+        <span class="header-note"><span class="header-note-dot"></span> MADE FOR YOUR NEXT MILE</span>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow"><span class="eyebrow-line"></span> THE RUNNER'S TOOLKIT <span class="eyebrow-number">/ 01</span></p>
+          <h1 id="page-title">A goal is just a<br><em>pace away.</em></h1>
+          <p class="intro-copy">From your first 5K to your next personal best, find the pace that gets you there.</p>
+        </section>
+
+        <section class="calculator" aria-label="Running pace calculator">
+          <div class="input-panel">
+            <div class="section-heading">
+              <div><p class="overline">THE PLAN</p><h2>Set your goal</h2></div>
+              <span class="section-number">01 / 02</span>
+            </div>
+            <form id="pace-form" novalidate>
+              <fieldset class="race-fieldset">
+                <legend>Pick a popular distance <span>or enter your own below</span></legend>
+                <div class="race-options" aria-label="Popular distances">
+                  <button type="button" class="race-option selected" data-distance="5" aria-pressed="true"><strong>5K</strong><small>5 km</small></button>
+                  <button type="button" class="race-option" data-distance="10" aria-pressed="false"><strong>10K</strong><small>10 km</small></button>
+                  <button type="button" class="race-option" data-distance="21.0975" aria-pressed="false"><strong>Half</strong><small>21.1 km</small></button>
+                  <button type="button" class="race-option" data-distance="42.195" aria-pressed="false"><strong>Marathon</strong><small>42.2 km</small></button>
+                </div>
+              </fieldset>
+
+              <div class="field-group">
+                <label for="distance">Distance</label>
+                <div class="distance-control">
+                  <input id="distance" name="distance" type="number" inputmode="decimal" min="0.000001" step="any" value="5" required>
+                  <label class="sr-only" for="distance-unit">Distance unit</label>
+                  <select id="distance-unit" name="distance-unit">
+                    <option value="km">km</option>
+                    <option value="mi">miles</option>
+                  </select>
+                </div>
+              </div>
+              <fieldset class="time-fieldset">
+                <legend>Target finish time</legend>
+                <div class="time-controls">
+                  <div><label for="hours">HOURS</label><input id="hours" type="number" inputmode="numeric" min="0" step="1" value="0" required></div>
+                  <span aria-hidden="true">:</span>
+                  <div><label for="minutes">MINUTES</label><input id="minutes" type="number" inputmode="numeric" min="0" max="59" step="1" value="25" required></div>
+                  <span aria-hidden="true">:</span>
+                  <div><label for="seconds">SECONDS</label><input id="seconds" type="number" inputmode="numeric" min="0" max="59" step="1" value="0" required></div>
+                </div>
+              </fieldset>
+              <p class="form-note"><span aria-hidden="true">↗</span> Your pace updates as you make changes.</p>
+              <p id="error" class="error" role="alert" hidden></p>
+            </form>
+          </div>
+
+          <div class="result-panel">
+            <div class="result-top">
+              <div><p class="overline">THE PAYOFF</p><h2>Your target pace</h2></div>
+              <span class="section-number">02 / 02</span>
+            </div>
+            <p class="result-intro">The pace to keep your goal in sight.</p>
+            <div id="results" aria-live="polite" aria-atomic="true">
+              <div class="pace-row"><div><p class="pace-label">PER KILOMETRE</p><p class="pace-value"><span id="pace-km">5:00</span><span class="pace-unit"> /km</span></p></div><span class="pace-index">01</span></div>
+              <div class="pace-row"><div><p class="pace-label">PER MILE</p><p class="pace-value"><span id="pace-mile">8:03</span><span class="pace-unit"> /mi</span></p></div><span class="pace-index">02</span></div>
+              <p class="result-summary" id="summary">5 km <span>in</span> 25:00</p>
+            </div>
+            <div class="result-footer"><span>ONE STEP AT A TIME.</span><span aria-hidden="true">↗</span></div>
+          </div>
+        </section>
+        <p class="bottom-note"><span>GOOD THINGS COME TO THOSE WHO RUN.</span><span>YOUR GOAL. YOUR PACE.</span></p>
+      </main>
+      <footer><span>PACE<span class="brand-dot">.</span></span><span>BUILT FOR THE LONG RUN.</span></footer>
+    </div>
+  </body>
+</html>

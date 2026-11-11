@@ -31,7 +31,7 @@ jobs:
           mkdir site
           cp index.html styles.css app.js pace.js site/
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
       - id: deployment
